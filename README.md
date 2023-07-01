@@ -15,7 +15,7 @@ notes about reading books, solve problems for programmers
   - [kubernetes](./开源项目总结/云原生/kubernetes/kubernetes.md)
   - [资源调度](./开源项目总结/资源调度/资源调度.md)
     - [hadoop-yarn](./开源项目总结/资源调度/hadoop-yarn.md)
-    - [kube-batch](./kube-batch.md)
+    - [kube-batch](./开源项目总结/资源调度/kube-batch.md)
     - [mesos](./开源项目总结/资源调度/mesos.md)
     - [rays](./开源项目总结/资源调度/rays.md)
     - [slurm](./开源项目总结/资源调度/slurm.md)
