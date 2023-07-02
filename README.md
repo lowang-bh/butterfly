@@ -21,3 +21,6 @@ notes about reading books, solve problems for programmers
     - [slurm](./开源项目总结/资源调度/slurm.md)
     - [volcano](./开源项目总结/资源调度/volcano.md)
     - [yunikorn](./开源项目总结/资源调度/yunikorn.md)
+- [运维手册](./运维手册/运维手册.md)
+  - [linux](./运维手册/linux/linux.md)
+  - [mysql](./运维手册/mysql/mysql.md)
