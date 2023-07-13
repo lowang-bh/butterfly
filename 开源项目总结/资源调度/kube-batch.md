@@ -1,16 +1,16 @@
 # kube-batch
 
 - [kube-batch](#kube-batch)
-  - [1.基础概念](#1基础概念)
-  - [2.Actions](#2actions)
-  - [3.plugins](#3plugins)
-    - [3.1 Priority](#31-priority)
-    - [3.2 Gang](#32-gang)
-    - [3.3 Conformance](#33-conformance)
-    - [3.4 DRF (Dominant　Resource　Fairness)](#34-drf-dominantresourcefairness)
-    - [3.5 predication](#35-predication)
-    - [3.6 nodeorder](#36-nodeorder)
-    - [3.7 Proportion](#37-proportion)
+    - [1.基础概念](#1基础概念)
+    - [2.Actions](#2actions)
+    - [3.plugins](#3plugins)
+        - [3.1 Priority](#31-priority)
+        - [3.2 Gang](#32-gang)
+        - [3.3 Conformance](#33-conformance)
+        - [3.4 DRF (Dominant　Resource　Fairness)](#34-drf-dominantresourcefairness)
+        - [3.5 predication](#35-predication)
+        - [3.6 nodeorder](#36-nodeorder)
+        - [3.7 Proportion](#37-proportion)
 
 kube-batch是在kubernetes之上的一个专注于做批处理的调度器，是volcano项目的前身。kube-batch提供了批调度(gang-schedule)的能力，来支撑各种大数据、AI框架运行在k8s上。volcano相对于kube-batch则完善了包括Controller、Admission等批处理生态组件。目前kube-batch已经处于不维护的状态，基本都切换到去对接使用volcano。我自己打算维护一个[分支](https://github.com/lowang-bh/kube-batch.git)尽量修复已知的一些问题，感兴趣的同学可以在上面试用,其设计理念值得我们学习。
 
@@ -98,6 +98,7 @@ for _, plugin := range ssn.plugins {
 
 1. 给未处于ready状态的job更高的优先级，使其能尽快调度；  
 2. 判断job是否可以被抢占
+3. 判断作业的任务是否ready(满足gang-schedule特性,即可调度副本数满足最小副本需求数量)，只有ready的作业才真正提交调度结果
 
 - validJobFn: job的valid任务不满足最小可用数（job.ValidTaskNum() < MinAvailable）
 - reclaimableFns: job的ready任务数多于最小可用数 （MinAvailable <= job.ReadyTaskNum()-1）
@@ -110,8 +111,8 @@ for _, plugin := range ssn.plugins {
 
 作用: conformance plugin认为命名空间kube-system下的任务具有更高的优先级。这些任务不能被抢占
 
-- PreemptableFn：认为命名空间kube-system下的任务具有更高的优先级,这些任务不能被抢占。
-- ReclaimableFn: 同上使用evictableFn
+- PreemptableFn：认为命名空间`kube-system`下的任务具有更高的优先级,这些任务不能被抢占。
+- ReclaimableFn: 同上使用同一个函数`evictableFn`,`kube-system`命名空间下的任务不能被召回
 
 ### 3.4 DRF (Dominant　Resource　Fairness)
 
