@@ -7,7 +7,8 @@ notes about reading books, problems solutions for programmers
 学习与分享
 
   1. 促进自己阅读一些优秀的书籍并记录笔记，同时鼓励其他人分享一些优秀书籍的阅读笔记与总结
-  2. 记录并分享一些实际问题的解决方案(虽然现在有CSDN,StackOverflow等,假如有一天该项目记录的问题足够大家第一时间想到此处查阅呢)
+  2. 收集并归类同类的其他GitHub仓库
+  3. 记录并分享一些实际问题的解决方案(虽然现在有CSDN,StackOverflow等,假如有一天该项目记录的问题足够大家第一时间想到此处查阅呢)
 
 ## 免责申明
 
@@ -39,3 +40,4 @@ notes about reading books, problems solutions for programmers
 - [运维手册](./运维手册/运维手册.md)
   - [linux](./运维手册/linux/linux.md)
   - [mysql](./运维手册/mysql/mysql.md)
+- [其他github仓库推荐](./github仓库/README.md)
