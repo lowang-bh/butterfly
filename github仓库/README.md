@@ -33,3 +33,8 @@
 - [jamiehannaford/what-happens-when-k8s](https://github.com/jamiehannaford/what-happens-when-k8s)
 - [Kevin-fqh/learning-k8s-source-code](https://github.com/Kevin-fqh/learning-k8s-source-code)
 - [rfyiamcool/notes](https://github.com/rfyiamcool/notes)
+- [kubernetes-handbook](https://github.com/rootsongjc/kubernetes-handbook)
+
+### 3.2 云原生
+
+- [rootsongjc/awesome-cloud-native](https://github.com/rootsongjc/awesome-cloud-native)
