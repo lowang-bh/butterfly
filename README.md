@@ -41,6 +41,7 @@ notes about reading books, problems solutions for programmers
   - [面试问题](./问题集锦/面试问题/README.md)
   - [leetcode](./问题集锦/leetcode/README.md)
 - [运维手册](./运维手册/运维手册.md)
+  - [kubernetes](./运维手册/k8s/k8s.md)
   - [linux](./运维手册/linux/linux.md)
   - [mysql](./运维手册/mysql/mysql.md)
 - [其他github仓库推荐](./github仓库/README.md)
