@@ -34,6 +34,8 @@ notes about reading books, problems solutions for programmers
     - [slurm](./开源项目总结/资源调度/slurm.md)
     - [volcano](./开源项目总结/资源调度/volcano.md)
     - [yunikorn](./开源项目总结/资源调度/yunikorn.md)
+- [论文](./论文/README.md)
+  - [资源调度](./论文/资源调度/README.md)
 - [问题集锦](./问题集锦/README.md)
   - [开发问题](./问题集锦/开发问题/README.md)
     - [golang](./问题集锦/开发问题/golang/golang.md)
